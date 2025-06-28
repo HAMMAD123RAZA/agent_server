@@ -47,6 +47,10 @@ app.get('/health', (req, res) => {
   res.json({ status: 'Server is running', timestamp: new Date().toISOString() });
 });
 
+app.get('/',(req,res)=>{
+  res.json('Hi ')
+})
+
 app.get('/getAllData', handleCrudOperations);           // GET all documents
 app.post('/createData', handleCrudOperations);          // POST create document
 app.get('/getDataById/:id', handleCrudOperations);      // GET document by ID
