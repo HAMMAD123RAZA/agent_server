@@ -58,6 +58,7 @@ app.put('/updateData/:id', handleCrudOperations);       // PUT update document
 app.patch('/patchData/:id', handleCrudOperations);      // PATCH partial update
 app.delete('/deleteData/:id', handleCrudOperations);    
 
+
 // Socket.IO connection handling
 io.on('connection', (socket) => {
   console.log('New client connected:', socket.id);
